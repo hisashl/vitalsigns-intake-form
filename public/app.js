@@ -2,7 +2,7 @@
 const form = document.getElementById('patient-form');
  
 form.addEventListener('submit', async (event) => {
-    
+    event.preventDefault();
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData.entries());
 
