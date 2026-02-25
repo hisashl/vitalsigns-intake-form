@@ -12,7 +12,7 @@ form.addEventListener('submit', async (event) => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(data) // Convert JS object to JSON string
+            body: JSON.stringify(data)  
         });
  
         const result = await response.json();
