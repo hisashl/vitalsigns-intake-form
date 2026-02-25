@@ -10,6 +10,10 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 app.post('/api/register-patient', (req, res) => {
     const patientData = req.body;
     console.log("New Patient Received:", patientData);
